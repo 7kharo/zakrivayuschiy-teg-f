@@ -11,22 +11,22 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header">
-      <span class="">&lt;/HTML&gt;</span>
-      <h1 class="">закрывающий тег</h1>
+    <header class="header card">
+      <span class="header-logo">&lt;/HTML&gt;</span>
+      <h1 class="header-title">закрывающий тег</h1>
     </header>
-    <main>
-      <ul>
-        <li>
-          <article>
-            <h2>
+    <main class = "main">
+      <ul class = "card-list">
+        <li class = "card-list-item">
+          <article class = "card">
+            <h2 class = "card-title">
               Фритрек и нулевой спринт: Подготовка к работе
             </h2>
-            <div>
-              <img src ="./images/image.png" alt = "">
-              <span></span>
+            <div class = "card-image-box">
+              <img class = "card-image" src ="./images/image.png" alt = "описание картинки">
+              <span class = "image-watermark"></span>
             </div>
-            <div>
+            <div class = "card-text">
               <p>
                 Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
               </p>
@@ -34,16 +34,29 @@
                 Место для ваших воспоминаний о начале обучения.
               </p>
             </div>
-            <div>
-              <button></button>
-              <button>Like</button>
+            <div class = "card-buttons">
+              <button
+                class = "square-button"
+                id=""
+                type="button">
+              </button>
+              <button 
+                class = "square-button"
+                id=""
+                type="button">
+                <span class = "button-text">Like</span>
+              </button>
             </div>
           </article>
         </li>
       </ul>
     </main>
     <footer>
-      <button>Сохранить на память</button>
+      <button
+        type="button"
+        class="button">
+        <span class = "button-text">Сохранить на память</span>
+      </button>
       <dialog></dialog>
     </footer>
     <script src="./scripts/like.js"></script>
