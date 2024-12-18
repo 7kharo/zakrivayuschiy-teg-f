@@ -1,6 +1,32 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --main-font-family: "Inter", sans-serif;
+    --black-color: #000;
+    --white-color: #fff;
+    --red-color: red;
+    
+    --text-color: var(--black-color, #000);
+    --bg-color: var(--white-color, #fff);
+    --button-text-color: var(--white-color, #fff);
+    --heart-core-color: none;
+    --heart-contour-color: var(--black-color, #000);
+    --heart-sparks-color: var(--red-color, red);
+    --heart-main-body-color: none;
+
+    --bg-image: repeating-linear-gradient(
+        to left, 
+        #d3d3d3 0 2px,
+        #d3d3d300 2px 4px),
+       repeating-linear-gradient(
+        to bottom,
+        #d3d3d3 0 2px,
+        #d3d3d300 2px 4px),
+       linear-gradient(
+        to bottom,
+        #e7e7e7 0.01%,
+        #1a1a1a);
+
+    --main-font-family: "Inter-Variable", sans-serif;
     --main-font-weight: 400;
     --accent-font-family: "PressStart2P", fantasy;
+    --card-title-font-weight: 700;
 }
