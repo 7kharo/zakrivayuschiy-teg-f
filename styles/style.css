@@ -11,6 +11,8 @@
 */
 
 .page {
+  display: grid;
+  justify-content: center;
   padding-block-start: 100px;
   color: var(--text-color, #000);
   font-family: var(--main-font-family, "Inter-Variable", sans-serif);
@@ -30,10 +32,8 @@
   font-family: var(--accent-font-family, "PressStart2P", fantasy);
   line-height: normal;
   text-transform: uppercase;
-  padding-block-start: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
-  padding-block-end: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
-  padding-inline-start: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
-  padding-inline-end: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
+  padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  padding-inline: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   margin-block-end: 100px;
   max-inline-size: 700px;
   max-block-size: 368px;
@@ -62,7 +62,6 @@
 }
 
 .card {
-  margin-inline: auto;
   border: 2px solid #000000;
   background: var(--bg-color, #fff);
   max-inline-size: 696px;
@@ -86,29 +85,63 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
-  min-inline-size: 696px;
   aspect-ratio: 1 / 1;
+}
+
+.filter-blur {
+  filter: blur(3px);
+}
+
+.filter-brightness {
+  filter: brightness(30%);
+}
+
+.filter-contrast {
+  filter: contrast(250%);
+}
+
+.filter-drop-shadow {
+  filter: drop-shadow(4px 4px red);
+}
+
+.filter-grayscale {
+  filter: grayscale(80%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(0.5turn);
+}
+
+.filter-invert {
+  filter: invert(100%);
+}
+
+.filter-many {
+  filter: blur(3px) brightness(30%) drop-shadow(4px 4px red);
 }
 
 .image-watermark {
   position: absolute;
-  inset-inline-end: 23px;
+  inset-inline-end: clamp(0.6875rem, 0.4234rem + 1.1268vw, 1.4375rem);
   inset-block-start: 26px;
-  z-index: 1;
   opacity: 0.5;
   font-family: var(--accent-font-family, "PressStart2P", fantasy);
   font-size: 14px;
   line-height: normal;
-  text-transform: uppercase;
   color: var(--text-color, #000);
-  text-shadow: 0 1px #fff;
+  text-shadow:0 0 1px #fff;
   mix-blend-mode: hard-light;
+  z-index: 1;
+}
+
+.watermark-uppercase {
+  text-transform: uppercase;
 }
 
 .card-text {
   display: grid;
-  gap: 27px;
-  padding: 27px 0 0 22px;
+  gap: 26px;
+  padding: 31px 25px 0 25px;
   border-block-start: 2px solid var(--text-color, #000000);
   font-size: 18px;
   line-height: 21px;
@@ -265,14 +298,12 @@
   }
 }
 
-
 @supports (
-  (-webkit-text-stroke: 1px var(--page-background-color, #ffffff)) or
-    (text-stroke: 1px var(--page-background-color, #ffffff))
-) {
+  (-webkit-text-stroke: 1px var(--bg-color, #fff)) or
+    (text-stroke: 1px var(--bg-color, #fff))) {
   .image-watermark {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
-    text-stroke: 1px var(--page-background-color, #ffffff);
+    text-stroke: 1px var(----bg-color, #fff);
+    -webkit-text-stroke: 1px var(----bg-color, #fff);
   }
 }
