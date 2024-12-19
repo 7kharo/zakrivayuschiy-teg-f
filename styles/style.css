@@ -218,12 +218,6 @@
   border-color: var(--text-color, #000);
 }
 
-/* .save-button-box {
-  display: flex;
-  justify-content: center;
-  padding-block: 50px 103px;
-} */
-
 .save-button {
   display: flex;
   flex-direction: row;
