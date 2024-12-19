@@ -6,7 +6,7 @@
     <title>Закрывающий тег</title>
     <link rel="shortcut icon" href="./images/favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="./svg/favicon.svg" type="image/svg+xml" />
-    <link rel="touch-icon" href="./images/favicon.png" />
+    <link rel="apple-touch-icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -41,7 +41,7 @@
               <button
                 class = "card__icon-button"
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon" aria-hidden="true">
                   <g class = "heart">
                     <path
                     class = "contour"
@@ -93,7 +93,7 @@
               <button
                 class = "card__icon-button"
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon" aria-hidden="true">
                   <g class = "heart">
                     <path
                     class = "contour"
@@ -145,7 +145,7 @@
               <button
                 class = "card__icon-button"
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon" aria-hidden="true">
                   <g class = "heart">
                     <path
                     class = "contour"
@@ -197,7 +197,7 @@
               <button
                 class = "card__icon-button"
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon" aria-hidden="true">
                   <g class = "heart">
                     <path
                     class = "contour"
@@ -249,7 +249,7 @@
               <button
                 class = "card__icon-button"
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon" aria-hidden="true">
                   <g class = "heart">
                     <path
                     class = "contour"
@@ -301,7 +301,7 @@
               <button
                 class = "card__icon-button"
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon" aria-hidden="true">
                   <g class = "heart">
                     <path
                     class = "contour"
@@ -353,7 +353,7 @@
               <button
                 class = "card__icon-button"
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon" aria-hidden="true">
                   <g class = "heart">
                     <path
                     class = "contour"
@@ -405,7 +405,7 @@
               <button
                 class = "card__icon-button"
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none" class = "like-icon" aria-hidden="true">
                   <g class = "heart">
                     <path
                     class = "contour"
@@ -437,27 +437,41 @@
           </article>
         </li>
       </ul>
+    
+      <!-- <div class = "save-button-box">
+        <button
+          type="button"
+          onclick="window['dlg-save-id'].showModal()" 
+          aria-controls="dlg-save-id"
+          class="button save-button">
+          <svg class="floppy-icon" viewBox="0 0 29 28">
+            <use href="svg/floppy.svg#floppy" />
+          </svg>
+          <span class = "button__text">Сохранить на память</span>
+        </button>
+      </div> -->
+
+        <button
+          type="button"
+          onclick="window['dlg-save-id'].showModal()" 
+          aria-controls="dlg-save-id"
+          class="button save-button">
+          <svg class="floppy-icon" viewBox="0 0 29 28">
+            <use href="svg/floppy.svg#floppy" />
+          </svg>
+          <span class = "button__text">Сохранить на память</span>
+        </button>
+    
     </main>
 
-    <footer class = "footer">
-      <button
-        type="button"
-        onclick="window['dlg-save-id'].showModal()" 
-        aria-controls="dlg-save-id"
-        class="button save-button">
-        <svg class="floppy-icon" viewBox="0 0 29 28">
-          <use href="svg/floppy.svg#floppy" />
-        </svg>
-        <span class = "button__text">Сохранить на память</span>
-      </button>
-    </footer>
+    
     
     <dialog class="dlg-save" id="dlg-save-id">
       <div class="dlg-save-content">
         <svg class="dlg-floppy-icon" viewBox="0 0 29 28">
           <use href="svg/floppy.svg#floppy" />
         </svg>
-        <p>Вставьте<br> дискету,чтобы продолжить</p>
+        <p>Вставьте дискету,чтобы продолжить</p>
       </div>
       <form method="dialog">
         <button type="submit"

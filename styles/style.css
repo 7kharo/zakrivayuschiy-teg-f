@@ -36,7 +36,6 @@
   padding-inline: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
   margin-block-end: 100px;
   max-inline-size: 700px;
-  max-block-size: 368px;
 }
 
 .header-logo {
@@ -53,7 +52,6 @@
 .main {
   display: grid;
   justify-items: center;
-  gap: 57px;
 }
 
 .card-list {
@@ -220,11 +218,11 @@
   border-color: var(--text-color, #000);
 }
 
-.footer {
+/* .save-button-box {
   display: flex;
   justify-content: center;
   padding-block: 50px 103px;
-}
+} */
 
 .save-button {
   display: flex;
@@ -233,6 +231,7 @@
   align-items: center;
   gap: 10px;
   padding: 15px 20px;
+  margin-block: 50px 103px;
 }
 
 .floppy-icon {
@@ -254,6 +253,7 @@
   padding: 30px;
   color: var(--text-color, #000);
   font-family: var(--accent-font-family, "PressStart2P", fantasy);
+  font-size: 14px;
   line-height: 1.5em;
   text-transform: uppercase;
   max-inline-size: 355px;
@@ -293,7 +293,7 @@
   }
 
   .dlg-save {
-    max-inline-size: 340px;
+    max-inline-size: 341px;
     padding: 28px 34px 28px 40px;
   }
 }
